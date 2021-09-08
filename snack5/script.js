@@ -7,14 +7,14 @@
 
 function cut(arr, start = 0, end = -1) {
   let newArr = [];
-
+  let arrLength = 0;
+  
   if (end == -1 || end > arr.length) {
     end = arr.length
   }
   
-  let arrLength = end - start;
+  arrLength = end - start;
   
-
   while (newArr.length < arrLength) {
     newArr.push(arr[start]);
     start++;
