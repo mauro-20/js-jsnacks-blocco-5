@@ -5,9 +5,15 @@
 // compresa tra “a” e “b”
 
 
-function cut(arr, start, end) {
+function cut(arr, start = 0, end = -1) {
   let newArr = [];
+
+  if (end == -1 || end > arr.length) {
+    end = arr.length
+  }
+  
   let arrLength = end - start;
+  
 
   while (newArr.length < arrLength) {
     newArr.push(arr[start]);
@@ -20,4 +26,4 @@ function cut(arr, start, end) {
 
 let arr = ['a', 'b', 'c', 'd', 'e'];
 
-console.log(cut(arr, 2, 4));
+console.log(cut(arr, 2));
